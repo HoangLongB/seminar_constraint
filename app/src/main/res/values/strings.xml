@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SeminarConstraint</string>
+    <string name="button_group">Group</string>
+    <string name="button_place_holder">Placeholder</string>
+    <string name="button_animation">Animation</string>
+    <string name="button_relative_position">Relative Position</string>
+    <string name="button_chain">Chain</string>
+    <string name="button_guideline">Guideline</string>
+    <string name="button_constraint_ratio">Constraint Ratio</string>
+    <string name="button_barrier">Barrier</string>
+    <string name="space_stations">Space Stations</string>
+    <string name="rovers">Rovers</string>
+    <string name="flights">Flights</string>
+    <string name="one_way">One Way</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="dca">DCA</string>
+    <string name="mars">MARS</string>
+    <string name="traveller">1 Traveller</string>
+    <string name="depart">Depart</string>
+</resources>

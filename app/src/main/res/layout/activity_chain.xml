@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spaceStationIcon"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_15"
+        android:src="@drawable/space_station_icon"
+        app:layout_constraintEnd_toStartOf="@+id/flightsIcon"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/flightsIcon"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/spaceStationIcon"
+        app:layout_constraintEnd_toStartOf="@+id/roverIcon"
+        app:layout_constraintStart_toEndOf="@+id/spaceStationIcon"
+        app:layout_constraintTop_toTopOf="@+id/spaceStationIcon"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/roverIcon"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/flightsIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flightsIcon"
+        app:layout_constraintTop_toTopOf="@+id/flightsIcon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/roverLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/rovers"
+        app:layout_constraintEnd_toEndOf="@+id/roverIcon"
+        app:layout_constraintStart_toStartOf="@+id/roverIcon"
+        app:layout_constraintTop_toBottomOf="@+id/roverIcon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/flightsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/flights"
+        app:layout_constraintEnd_toEndOf="@+id/flightsIcon"
+        app:layout_constraintStart_toStartOf="@+id/flightsIcon"
+        app:layout_constraintTop_toBottomOf="@+id/flightsIcon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spaceStationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/space_stations"
+        app:layout_constraintEnd_toEndOf="@+id/spaceStationIcon"
+        app:layout_constraintStart_toStartOf="@+id/spaceStationIcon"
+        app:layout_constraintTop_toBottomOf="@+id/spaceStationIcon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

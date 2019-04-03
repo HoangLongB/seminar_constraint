@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.sec6.seminarconstraint"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".PlaceholderActivity">
+        </activity>
+        <activity android:name=".GroupActivity">
+        </activity>
+        <activity android:name=".BarrierActivity">
+        </activity>
+        <activity android:name=".GuideLineActivity">
+        </activity>
+        <activity android:name=".ChainActivity">
+        </activity>
+        <activity android:name=".ConstraintRatioActivity">
+        </activity>
+        <activity android:name=".RelativePositionActivity">
+        </activity>
+        <activity android:name=".AnimationActivity">
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
