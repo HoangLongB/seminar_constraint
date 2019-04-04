@@ -5,6 +5,249 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuideLineActivity">
+    tools:context=".GroupActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:src="@drawable/poster"
+        app:layout_constraintDimensionRatio="h,1:1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:fontFamily="sans-serif"
+        android:paddingBottom="16dp"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/message_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/flightsLabel"
+        app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spaceStationIcon"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_32"
+        android:src="@drawable/space_station_icon"
+        app:layout_constraintEnd_toStartOf="@+id/flightsIcon"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/flightsIcon"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_32"
+        android:src="@drawable/rocket_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/spaceStationIcon"
+        app:layout_constraintEnd_toStartOf="@+id/roverIcon"
+        app:layout_constraintStart_toEndOf="@+id/spaceStationIcon"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/roverIcon"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_32"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/flightsIcon"
+        app:layout_constraintEnd_toStartOf="@id/icon_4"
+        app:layout_constraintStart_toEndOf="@+id/flightsIcon"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_4"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_32"
+        android:src="@drawable/rover_icon"
+        app:layout_constraintBottom_toBottomOf="@id/roverIcon"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/roverIcon"
+        app:layout_constraintTop_toTopOf="@id/guideline3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/roverLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/rovers"
+        app:layout_constraintEnd_toEndOf="@+id/roverIcon"
+        app:layout_constraintStart_toStartOf="@+id/roverIcon"
+        app:layout_constraintTop_toBottomOf="@+id/roverIcon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/flightsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/flights"
+        app:layout_constraintEnd_toEndOf="@+id/flightsIcon"
+        app:layout_constraintStart_toStartOf="@+id/flightsIcon"
+        app:layout_constraintTop_toBottomOf="@+id/flightsIcon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spaceStationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/space_stations"
+        app:layout_constraintEnd_toEndOf="@+id/spaceStationIcon"
+        app:layout_constraintStart_toStartOf="@+id/spaceStationIcon"
+        app:layout_constraintTop_toBottomOf="@+id/spaceStationIcon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/space_stations"
+        app:layout_constraintEnd_toEndOf="@+id/icon_4"
+        app:layout_constraintStart_toStartOf="@+id/icon_4"
+        app:layout_constraintTop_toBottomOf="@+id/icon_4"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_8"
+        android:text="@string/message_desc"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/flightsIcon"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6019152"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@android:color/holo_red_light"
+        android:text="@string/message_rent"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@android:color/holo_red_light"
+        android:text="@string/message_buy"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_bookmark_border_black_24dp"
+        tools:srcCompat="@drawable/ic_bookmark"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/message_time"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
